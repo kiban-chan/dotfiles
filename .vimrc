@@ -4,7 +4,7 @@ set title "ファイル名表示
 set showmatch "対応するカッコを表示
 set laststatus=2 "ステータスを表示
 set ruler "カーソル位置の表示
-set list "空白の可視化
+"set list "空白の可視化
 syntax on "色
 
 "---入力設定---
