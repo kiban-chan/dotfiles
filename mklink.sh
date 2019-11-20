@@ -1,3 +1,5 @@
 #!/bin/sh
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
+repopath=$(cd $(dirname $0); pwd)
+
+ln -sf $repopath/.vimrc $HOME/.vimrc
 
