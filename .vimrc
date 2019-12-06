@@ -14,6 +14,10 @@ set list "空白の可視化
 set listchars=tab:>-,trail:. "タブを>---で，スペースを.で表示
 syntax enable "色
 set showcmd "コマンドの表示
+set whichwrap=b,s,h,l,<,>,[,],~ "カーソルの左右で行の移動が可能に
+set cursorline " カーソルラインのハイライト
+set wildmenu "コマンドモードの補完
+set history=5000 "保存するコマンド履歴数
 
 "---入力設定---
 set encoding=utf-8 "文字コード
@@ -28,10 +32,11 @@ set softtabstop=2
 set shiftwidth=0
 
 "ファイルタイプで設定を変える
-if has("autocmd")
-  autocmd FileType python setlocal tabstop=4 softtabstop=4
+augroup vimrc
+  autocmd!
   autocmd FileType markdown setlocal tabstop=4 softtabstop=4
-endif
+  autocmd FileType python setlocal tabstop=4 softtabstop=4
+augroup END
 
 "---検索設定---
 set ignorecase "大文字/小文字を区別しない
