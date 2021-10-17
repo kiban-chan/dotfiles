@@ -58,3 +58,5 @@ inoremap <C-l> <right>
 
 inoremap <C-c> <Esc>
 
+"---カラースキーム設定---
+colorscheme darkblue
