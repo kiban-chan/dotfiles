@@ -1,0 +1,18 @@
+# #!/usr/bin/perl
+$latex        = 'platex -interaction=nonstopmode -synctex=1 -kanji=utf8 -halt-on-error';
+$latex_silent = 'platex -synctex=1 -halt-on-error -interaction=batchmode';
+#$dvips        = 'dvips';
+$bibtex       = 'pbibtex';
+$dvipdf       = 'dvipdfmx %O -o %D %S';
+$makeindex    = 'mendex %O -o %D %S';
+$max_repeat   = 5;
+$pdf_mode	    = 3; # generates pdf via dvipdfmx
+
+$aux_dir      = "build/";
+$out_dir      = $aux_dir;
+
+if ($^O eq 'linux') {
+    $pdf_previewer = 'evince';
+} else {
+    $pdf_previewer = '';
+}
