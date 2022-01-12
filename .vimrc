@@ -37,13 +37,13 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/vim-maketable'
 
 " helpの日本語化
-Plugin 'vim-jp/vimdoc-ja'
+"Plugin 'vim-jp/vimdoc-ja'
 
 call vundle#end()
 filetype plugin indent on
 
 " helpの日本語化
-set helplang=ja
+"set helplang=ja
 
 " ---NERDTree設定
 " Start NERDTree and leave the cursor in it.
@@ -56,6 +56,7 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+let g:NERDTreeWinPos = "right"
 
 " ---vim-airline設定
 let g:airline_theme = 'wombat'
