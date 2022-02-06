@@ -12,7 +12,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " ---以下にプラグインを列挙
+" Vundleが入ってない場合は以下のコマンドでｲﾝｽｺ
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " 追記したら`$vim +PluginInstall +qall`を実行してｲﾝｽｺ
+" mklink.shで上二つが実行される
 
 " いろんな言語のsyntaxとかindent
 Plugin 'sheerun/vim-polyglot'
