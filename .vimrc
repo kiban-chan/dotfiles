@@ -23,7 +23,7 @@ Plugin 'sheerun/vim-polyglot'
 " filetreeを表示
 Plugin 'preservim/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'ryanoasis/nerd-fonts'
+"Plugin 'ryanoasis/nerd-fonts'
 Plugin 'jistr/vim-nerdtree-tabs'
 
 " いい感じのステータスバー
