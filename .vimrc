@@ -110,6 +110,7 @@ augroup vimrc
   autocmd!
   autocmd FileType markdown setlocal tabstop=4 softtabstop=4
   autocmd FileType python setlocal tabstop=4 softtabstop=4
+  autocmd FileType make setlocal noexpandtab nosmarttab
 augroup END
 
 "---検索設定---
