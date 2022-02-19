@@ -62,10 +62,12 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 let g:NERDTreeWinPos = "left"
 
 " ---vim-airline設定
-let g:airline_theme = 'wombat'
-set laststatus=2
+let g:airline_theme = 'luna'
+"set laststatus=2
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#wordcount#enabled = 0
 let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'y', 'z']]
 let g:airline_section_c = '%t'
@@ -140,3 +142,9 @@ set belloff=all
 "---カラースキーム設定---
 colorscheme darkblue
 
+" モードでカーソル変える
+if has('vim_starting')
+  let &t_SI .= "\e[5 q"
+  let &t_EI .= "\e[1 q"
+  let &t_SR .= "\e[3 q"
+endif
