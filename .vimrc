@@ -148,3 +148,7 @@ if has('vim_starting')
   let &t_EI .= "\e[1 q"
   let &t_SR .= "\e[3 q"
 endif
+
+:set encoding=utf-8
+:set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+:set fileformats=unix,dos,mac
