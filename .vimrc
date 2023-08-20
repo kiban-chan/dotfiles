@@ -1,9 +1,14 @@
 " vi互換モードで動作させない
 set nocompatible
 
+" エンコード
+set encoding=utf-8
+scriptencoding utf-8 " set encodingの後に記述
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
+
 "ファイルタイプ有効化
-"filetype on
-filetype off
+filetype on
 
 " ---Pluginの設定---
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -96,9 +101,7 @@ set wildmenu "コマンドモードの補完
 set history=5000 "保存するコマンド履歴数
 
 "---入力設定---
-set encoding=utf-8 "文字コード
 set virtualedit=onemore "カーソルを行末の1つ先まで移動可能
-
 set autoindent "オートインデント
 set tabstop=2 "タブを2スペースで表示
 set smartindent "オートインデント
@@ -149,6 +152,3 @@ if has('vim_starting')
   let &t_SR .= "\e[3 q"
 endif
 
-:set encoding=utf-8
-:set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
-:set fileformats=unix,dos,mac
