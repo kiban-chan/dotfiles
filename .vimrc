@@ -2,15 +2,26 @@
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
-" vi互換モードで動作させない
-set nocompatible
+" 全体設定
+set nocompatible " vi互換モードで動作させない
+syntax enable "色
+set nobackup " バックアップファイルを作成しない
+set noswapfile " スワップファイルを作成しない
+set fenc=utf-8 " エンコーディングにUTF-8を使用
+set autoread " 自動読み込みをON
+set hidden " ファイルを保存せずに他ファイルを開けるように
+set wildmode=longest,full " ファイル名のタブ補完設定
+set number "行番号の表示
+
+"行番号の色を変更(動いていない 要調査)
+autocmd ColorScheme * highlight LineNr ctermfg=7 ctermbg=233
 
 "ファイルタイプ有効化
 filetype on
 filetype plugin on
 filetype plugin indent on
 
-" ターミナルを表示
+" ターミナルを下部に表示
 set splitbelow
 set termwinsize=10x0
 
@@ -31,14 +42,14 @@ set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac
 
 " 表示設定
-set number "行番号の表示
 set title "ファイル名表示
 set showmatch "対応するカッコを表示
+set statusline=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ [POS=%l/%L(%02v)] "ステータスラインの内容
 set laststatus=2 "ステータスを表示
+set t_Co=256 "256色表示
 set ruler "カーソル位置の表示
 set list "空白の可視化
 set listchars=tab:>-,trail:. "タブを>---で，スペースを.で表示
-syntax enable "色
 set showcmd "コマンドの表示
 set whichwrap=b,s,h,l,<,>,[,],~ "カーソルの左右で行の移動が可能に
 set cursorline " カーソルラインのハイライト
@@ -79,5 +90,4 @@ if has('vim_starting')
   let &t_EI .= "\e[1 q"
   let &t_SR .= "\e[3 q"
 endif
-
 
