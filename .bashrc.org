@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=2000
-HISTFILESIZE=5000
+HISTSIZE=1000
+HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -122,12 +122,3 @@ export PICO_SDK_PATH=/home/sugihara/workspace/raspico/pico/pico-sdk
 export PICO_EXAMPLES_PATH=/home/sugihara/workspace/raspico/pico/pico-examples
 export PICO_EXTRAS_PATH=/home/sugihara/workspace/raspico/pico/pico-extras
 export PICO_PLAYGROUND_PATH=/home/sugihara/workspace/raspico/pico/pico-playground
-
-# ctrl+sの無効化
-if [[ -t 0 ]]; then
-  stty stop undef
-  stty start undef
-fi
-
-# ビープ音の無効化
-set bell-style none
