@@ -123,11 +123,15 @@ export PICO_EXAMPLES_PATH=/home/sugihara/workspace/raspico/pico/pico-examples
 export PICO_EXTRAS_PATH=/home/sugihara/workspace/raspico/pico/pico-extras
 export PICO_PLAYGROUND_PATH=/home/sugihara/workspace/raspico/pico/pico-playground
 
-# ctrl+s$B$NL58z2=(B
+# ctrl+sの無効化
 if [[ -t 0 ]]; then
   stty stop undef
   stty start undef
 fi
 
-# $B%S!<%W2;$NL58z2=(B
+# ビープ音の無効化
 set bell-style none
+
+# WSLでのディレクトリ色変更
+eval $(dircolors -b ~/.dircolors)
+
