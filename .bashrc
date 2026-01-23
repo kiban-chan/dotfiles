@@ -115,13 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source ~/catkin_ws/devel/setup.bash
-
-alias stm32cubemx='/usr/local/bin/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX'
-export PICO_SDK_PATH=/home/sugihara/workspace/raspico/pico/pico-sdk
-export PICO_EXAMPLES_PATH=/home/sugihara/workspace/raspico/pico/pico-examples
-export PICO_EXTRAS_PATH=/home/sugihara/workspace/raspico/pico/pico-extras
-export PICO_PLAYGROUND_PATH=/home/sugihara/workspace/raspico/pico/pico-playground
 
 # ctrl+sの無効化
 if [[ -t 0 ]]; then
@@ -131,7 +124,4 @@ fi
 
 # ビープ音の無効化
 set bell-style none
-
-# WSLでのディレクトリ色変更
-eval $(dircolors -b ~/.dircolors)
 
