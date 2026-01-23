@@ -44,7 +44,7 @@ set fileformats=unix,dos,mac
 " 表示設定
 set title "ファイル名表示
 set showmatch "対応するカッコを表示
-set statusline=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ [POS=%l/%L(%02v)] "ステータスラインの内容
+set statusline=%f%m%H%W\ %<%=[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ [POS=%l/%L(%02v)] "ステータスラインの内容
 set laststatus=2 "ステータスを表示
 set t_Co=256 "256色表示
 set ruler "カーソル位置の表示
